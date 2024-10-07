@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Leak - Page d'accueil</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="icons/style.css" />
+  </head>
+  <body on onload="setup()">
+    <div class="layout">
+      <header class="header layout__header">
+        <nav class="header__nav">
+          <a href="." class="header__logo">
+            <span class="header__logo--text text--l">
+              <i class="ph-duotone ph-drop"></i>
+              DR. LEAK
+            </span>
+          </a>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="." class="menu__link menu__link--active">
+                <i class="menu__icon ph-duotone ph-house"></i>
+                <span class="menu__label">Page d'Accueil</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <i class="menu__icon ph-duotone ph-engine"></i>
+                <span class="menu__label">Espace de Travail</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <i class="menu__icon ph-duotone ph-eye"></i>
+                <span class="menu__label">Capteurs</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                <i class="menu__icon ph-duotone ph-chart-bar"></i>
+                <span class="menu__label">Performance</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="controls">
+          <div class="controls__item">
+            <i class="controls__icon ph-duotone ph-network"></i>
+            <span class="controls__text">
+              <span class="controls__label text--xs">Réseau</span>
+              <span class="controls__value">Paranaguá</span>
+            </span>
+          </div>
+          <div class="controls__item">
+            <i class="controls__icon ph-duotone ph-calendar-dots"></i>
+            <span class="controls__text">
+              <span class="controls__label text--xs">Intervalle de dates</span>
+              <span class="controls__value">Cette semaine</span>
+            </span>
+          </div>
+          <div class="controls__item">
+            <i class="controls__icon ph-duotone ph-file-text"></i>
+            <span class="controls__text">
+              <span class="controls__label text--xs">Événements</span>
+              <span class="controls__value events-summary">
+                <span class="indicator indicator--icon" data-tier="warning"
+                  >3</span
+                >
+                <span class="indicator indicator--icon" data-tier="error"
+                  >4</span
+                >
+              </span>
+            </span>
+          </div>
+          <div class="user">
+            <img
+              src="https://avatar.iran.liara.run/public/13"
+              class="user__avatar"
+            />
+            <i class="user__arrow ph-duotone ph-caret-down"></i>
+          </div>
+        </div>
+      </header>
+      <main class="layout__main layout__main--no-padding">
+        <div class="columns--1-3 columns--full">
+          <section class="filter-column">
+            <ul class="tree">
+              <li class="tree__item">
+                <input
+                  type="radio"
+                  name="tree-active"
+                  id="tree-active-0"
+                  class="tree__input-active hidden"
+                  checked
+                />
+                <input
+                  type="checkbox"
+                  name="tree-expanded"
+                  id="tree-expanded-0"
+                  class="tree__input-expanded hidden"
+                  checked
+                />
+                <div class="tree__body">
+                  <label
+                    for="tree-expanded-0"
+                    class="tree__expand ph-duotone"
+                  ></label>
+                  <label for="tree-active-0" class="tree__identifier">
+                    <i class="tree__icon ph-duotone ph-network"></i>
+                    <span class="tree__title">Paranaguá</span>
+                  </label>
+                </div>
+                <ul class="tree__children">
+                  <li class="tree__item">
+                    <input
+                      type="radio"
+                      name="tree-active"
+                      id="tree-active-1"
+                      class="tree__input-active hidden"
+                    />
+                    <input
+                      type="checkbox"
+                      name="tree-expanded"
+                      id="tree-expanded-1"
+                      class="tree__input-expanded hidden"
+                      checked
+                    />
+                    <div class="tree__body">
+                      <label
+                        for="tree-expanded-1"
+                        class="tree__expand ph-duotone"
+                      ></label>
+                      <label for="tree-active-1" class="tree__identifier">
+                        <i class="tree__icon ph-duotone ph-map-pin-area"></i>
+                        <span class="tree__title">ETA Colonia</span>
+                      </label>
+                    </div>
+                    <ul class="tree__children">
+                      <li class="tree__item">
+                        <input
+                          type="radio"
+                          name="tree-active"
+                          id="tree-active-2"
+                          class="tree__input-active hidden"
+                        />
+                        <input
+                          type="checkbox"
+                          name="tree-expanded"
+                          id="tree-expanded-2"
+                          class="tree__input-expanded hidden"
+                          checked
+                        />
+                        <div class="tree__body">
+                          <label
+                            for="tree-expanded-2"
+                            class="tree__expand ph-duotone"
+                          ></label>
+                          <label for="tree-active-2" class="tree__identifier">
+                            <i class="tree__icon ph-duotone ph-flask"></i>
+                            <span class="tree__title">CR0 CR3</span>
+                          </label>
+                        </div>
+                        <ul class="tree__children">
+                          <li class="tree__item">
+                            <input
+                              type="radio"
+                              name="tree-active"
+                              id="tree-active-3"
+                              class="tree__input-active hidden"
+                            />
+                            <input
+                              type="checkbox"
+                              name="tree-expanded"
+                              id="tree-expanded-3"
+                              class="tree__input-expanded hidden"
+                              checked
+                            />
+                            <div class="tree__body">
+                              <label
+                                for="tree-expanded-3"
+                                class="tree__expand ph-duotone"
+                              ></label>
+                              <label
+                                for="tree-active-3"
+                                class="tree__identifier"
+                              >
+                                <i class="tree__icon ph-duotone ph-pipe"></i>
+                                <span class="tree__title">Adutora 1</span>
+                              </label>
+                            </div>
+                            <ul class="tree__children">
+                              <li class="tree__item">
+                                <input
+                                  type="radio"
+                                  name="tree-active"
+                                  id="tree-active-5"
+                                  class="tree__input-active hidden"
+                                />
+                                <div class="tree__body">
+                                  <span class="tree__expand--empty"></span>
+                                  <label
+                                    for="tree-active-5"
+                                    class="tree__identifier"
+                                  >
+                                    <i
+                                      class="tree__icon ph-duotone ph-gear-six"
+                                    ></i>
+                                    <span class="tree__title">CR1</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="tree__item">
+                            <input
+                              type="radio"
+                              name="tree-active"
+                              id="tree-active-7"
+                              class="tree__input-active hidden"
+                            />
+                            <input
+                              type="checkbox"
+                              name="tree-expanded"
+                              id="tree-expanded-7"
+                              class="tree__input-expanded hidden"
+                              checked
+                            />
+                            <div class="tree__body">
+                              <label
+                                for="tree-expanded-7"
+                                class="tree__expand ph-duotone"
+                              ></label>
+                              <label
+                                for="tree-active-7"
+                                class="tree__identifier"
+                              >
+                                <i class="tree__icon ph-duotone ph-pipe"></i>
+                                <span class="tree__title">Adutora 2</span>
+                              </label>
+                            </div>
+                            <ul class="tree__children">
+                              <li class="tree__item">
+                                <input
+                                  type="radio"
+                                  name="tree-active"
+                                  id="tree-active-8"
+                                  class="tree__input-active hidden"
+                                />
+                                <input
+                                  type="checkbox"
+                                  name="tree-expanded"
+                                  id="tree-expanded-8"
+                                  class="tree__input-expanded hidden"
+                                  checked
+                                />
+                                <div class="tree__body">
+                                  <label
+                                    for="tree-expanded-8"
+                                    class="tree__expand ph-duotone"
+                                  ></label>
+                                  <label
+                                    for="tree-active-8"
+                                    class="tree__identifier"
+                                  >
+                                    <i
+                                      class="tree__icon ph-duotone ph-gear-six"
+                                    ></i>
+                                    <span class="tree__title">CR4</span>
+                                  </label>
+                                </div>
+                                <ul class="tree__children">
+                                  <li class="tree__item">
+                                    <input
+                                      type="radio"
+                                      name="tree-active"
+                                      id="tree-active-10"
+                                      class="tree__input-active hidden"
+                                    />
+                                    <div class="tree__body">
+                                      <span class="tree__expand--empty"></span>
+                                      <label
+                                        for="tree-active-10"
+                                        class="tree__identifier"
+                                      >
+                                        <i
+                                          class="tree__icon ph-duotone ph-eye"
+                                        ></i>
+                                        <span class="tree__title">DMC 2.5</span>
+                                      </label>
+                                      <ul class="tree__indicators">
+                                        <li
+                                          class="indicator indicator--icon"
+                                          data-tier="low"
+                                        >
+                                          <i
+                                            class="indicators__icon ph-duotone ph-ruler"
+                                          ></i>
+                                        </li>
+                                        <li
+                                          class="indicator indicator--icon"
+                                          data-tier="critical"
+                                        >
+                                          <i
+                                            class="indicators__icon ph-duotone ph-eye"
+                                          ></i>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="tree__item">
+                                    <input
+                                      type="radio"
+                                      name="tree-active"
+                                      id="tree-active-11"
+                                      class="tree__input-active hidden"
+                                    />
+                                    <div class="tree__body">
+                                      <span class="tree__expand--empty"></span>
+                                      <label
+                                        for="tree-active-11"
+                                        class="tree__identifier"
+                                      >
+                                        <i
+                                          class="tree__icon ph-duotone ph-eye"
+                                        ></i>
+                                        <span class="tree__title">DMC 2.7</span>
+                                      </label>
+                                      <ul class="tree__indicators">
+                                        <li
+                                          class="indicator indicator--icon"
+                                          data-tier="critical"
+                                        >
+                                          <i
+                                            class="indicators__icon ph-duotone ph-ruler"
+                                          ></i>
+                                        </li>
+                                        <li
+                                          class="indicator indicator--icon"
+                                          data-tier="low"
+                                        >
+                                          <i
+                                            class="indicators__icon ph-duotone ph-eye"
+                                          ></i>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="tree__item">
+                                    <input
+                                      type="checkbox"
+                                      name="tree-expanded"
+                                      id="tree-expanded-12"
+                                      class="tree__input-expanded hidden"
+                                      checked
+                                    />
+                                    <div class="tree__body">
+                                      <span class="tree__expand--empty"></span>
+                                      <label
+                                        for="tree-active-12"
+                                        class="tree__identifier"
+                                      >
+                                        <i
+                                          class="tree__icon ph-duotone ph-eye"
+                                        ></i>
+                                        <span class="tree__title">DMC 2.6</span>
+                                      </label>
+                                      <ul class="tree__indicators">
+                                        <li
+                                          class="indicator indicator--icon"
+                                          data-tier="critical"
+                                        >
+                                          <i
+                                            class="indicators__icon ph-duotone ph-eye"
+                                          ></i>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="tree__item">
+                                    <input
+                                      type="radio"
+                                      name="tree-active"
+                                      id="tree-active-13"
+                                      class="tree__input-active hidden"
+                                    />
+                                    <div class="tree__body">
+                                      <span class="tree__expand--empty"></span>
+                                      <label
+                                        for="tree-active-13"
+                                        class="tree__identifier"
+                                      >
+                                        <i
+                                          class="tree__icon ph-duotone ph-eye"
+                                        ></i>
+                                        <span class="tree__title">DMC 2.8</span>
+                                      </label>
+                                    </div>
+                                  </li>
+                                  <li class="tree__item">
+                                    <input
+                                      type="radio"
+                                      name="tree-active"
+                                      id="tree-active-14"
+                                      class="tree__input-active hidden"
+                                    />
+                                    <div class="tree__body">
+                                      <span class="tree__expand--empty"></span>
+                                      <label
+                                        for="tree-active-14"
+                                        class="tree__identifier"
+                                      >
+                                        <i
+                                          class="tree__icon ph-duotone ph-eye"
+                                        ></i>
+                                        <span class="tree__title">DMC 2.2</span>
+                                      </label>
+                                      <ul class="tree__indicators">
+                                        <li
+                                          class="indicator indicator--icon"
+                                          data-tier="low"
+                                        >
+                                          <i
+                                            class="indicators__icon ph-duotone ph-ruler"
+                                          ></i>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="tree__item">
+                                <input
+                                  type="radio"
+                                  name="tree-active"
+                                  id="tree-active-6"
+                                  class="tree__input-active hidden"
+                                />
+                                <div class="tree__body">
+                                  <span class="tree__expand--empty"></span>
+                                  <label
+                                    for="tree-active-6"
+                                    class="tree__identifier"
+                                  >
+                                    <i class="tree__icon ph-duotone ph-eye"></i>
+                                    <span class="tree__title">DMC 1.1</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="tree__item">
+                                <input
+                                  type="radio"
+                                  name="tree-active"
+                                  id="tree-active-15"
+                                  class="tree__input-active hidden"
+                                />
+                                <div class="tree__body">
+                                  <span class="tree__expand--empty"></span>
+                                  <label
+                                    for="tree-active-15"
+                                    class="tree__identifier"
+                                  >
+                                    <i class="tree__icon ph-duotone ph-eye"></i>
+                                    <span class="tree__title">DMC 1.2</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="tree__item">
+                                <input
+                                  type="radio"
+                                  name="tree-active"
+                                  id="tree-active-16"
+                                  class="tree__input-active hidden"
+                                />
+                                <div class="tree__body">
+                                  <span class="tree__expand--empty"></span>
+                                  <label
+                                    for="tree-active-16"
+                                    class="tree__identifier"
+                                  >
+                                    <i class="tree__icon ph-duotone ph-eye"></i>
+                                    <span class="tree__title">DMC 1.4</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="tree__item">
+                            <input
+                              type="radio"
+                              name="tree-active"
+                              id="tree-active-4"
+                              class="tree__input-active hidden"
+                            />
+                            <input
+                              type="checkbox"
+                              name="tree-expanded"
+                              id="tree-expanded-4"
+                              class="tree__input-expanded hidden"
+                              checked
+                            />
+                            <div class="tree__body">
+                              <label
+                                for="tree-expanded-4"
+                                class="tree__expand ph-duotone"
+                              ></label>
+                              <label
+                                for="tree-active-4"
+                                class="tree__identifier"
+                              >
+                                <i class="tree__icon ph-duotone ph-pipe"></i>
+                                <span class="tree__title">Adutora 3</span>
+                              </label>
+                            </div>
+                            <ul class="tree__children">
+                              <li class="tree__item">
+                                <input
+                                  type="radio"
+                                  name="tree-active"
+                                  id="tree-active-17"
+                                  class="tree__input-active hidden"
+                                />
+                                <div class="tree__body">
+                                  <span class="tree__expand--empty"></span>
+                                  <label
+                                    for="tree-active-17"
+                                    class="tree__identifier"
+                                  >
+                                    <i class="tree__icon ph-duotone ph-eye"></i>
+                                    <span class="tree__title">DMC 3.0</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section class="column">
+            <div class="heading">
+              <h1>Aperçu</h1>
+              <div class="date-filter">
+                <div class="date-filter__item">
+                  <label for="date-filter-start" class="text--xs">Du</label>
+                  <input
+                    type="date"
+                    name="date-filter-start"
+                    id="date-filter-start"
+                    value="2024-10-06"
+                    class="date-filter__input"
+                  />
+                </div>
+                <div class="date-filter__item">
+                  <label for="date-filter-end" class="text--xs">Au</label>
+                  <input
+                    type="date"
+                    name="date-filter-end"
+                    id="date-filter-end"
+                    value="2024-10-12"
+                    class="date-filter__input"
+                  />
+                </div>
+                <button class="date-filter__button text--l">
+                  <i class="ph-duotone ph-funnel"></i>
+                </button>
+              </div>
+            </div>
+            <div class="columns--1-2-1 mt--xl">
+              <section>
+                <div class="heading">
+                  <h2 class="icon-title">
+                    <i class="icon-title__icon ph-duotone ph-database"></i>
+                    Sources
+                  </h2>
+                </div>
+                <div class="content">
+                  <span class="mt--l d-block text-l">DATALOGGER</span>
+                  <img
+                    src="images/donut-chart.jpg"
+                    class="d-block ml--auto mr--auto mt--m"
+                  />
+                  <span class="mt--l d-block text-l">CIMVIEW</span>
+                  <img
+                    src="images/donut-chart.jpg"
+                    class="d-block ml--auto mr--auto mt--m"
+                  />
+                  <span class="mt--l d-block text-l">WONDERWARE</span>
+                  <img
+                    src="images/donut-chart.jpg"
+                    class="d-block ml--auto mr--auto mt--m"
+                  />
+                </div>
+              </section>
+              <div>
+                <section>
+                  <div class="heading">
+                    <h2 class="icon-title">
+                      <i class="icon-title__icon ph-duotone ph-gear-six"></i>
+                      DMAs
+                    </h2>
+                  </div>
+                  <div class="statistic content mt-m">
+                    <ul class="statistic__topics">
+                      <li class="statistic__topic">
+                        <span class="statistic__title text--s">
+                          Aperçu de DMA
+                        </span>
+                        <span
+                          class="indicator indicator--dynamic-width progress-indicator"
+                          data-tier="medium"
+                        >
+                          61/120
+                        </span>
+                      </li>
+                      <li class="statistic__topic">
+                        <span class="statistic__title text--s">
+                          Portée des utilisateurs de la cellule
+                        </span>
+                        <span
+                          class="indicator indicator--dynamic-width progress-indicator"
+                          data-tier="high"
+                        >
+                          20/30
+                        </span>
+                      </li>
+                      <li class="statistic__topic">
+                        <span class="statistic__title text--s"> Mesures </span>
+                        <span
+                          class="indicator indicator--dynamic-width progress-indicator"
+                          data-tier="high"
+                        >
+                          5280/5760
+                        </span>
+                      </li>
+                      <li class="statistic__topic">
+                        <span class="statistic__title text--s">
+                          Macro et Maxi créés
+                        </span>
+                        <span> 3 </span>
+                      </li>
+                      <li class="statistic__topic">
+                        <span class="statistic__title text--s"> Fantômes </span>
+                        <span> 0 </span>
+                      </li>
+                    </ul>
+                    <div
+                      class="progress-circle"
+                      data-tier="low"
+                      style="--progress-percentage: 50.18%"
+                    >
+                      <span class="progress-circle__content text--xl"
+                        >50.18%</span
+                      >
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <div class="heading mt--xl">
+                    <h2 class="icon-title">
+                      <i
+                        class="icon-title__icon ph-duotone ph-calendar-dot"
+                      ></i>
+                      Demande journalière
+                    </h2>
+                  </div>
+                  <img
+                    src="images/flow-chart.jpg"
+                    class="d-block ml--auto mr--auto mt--m"
+                  />
+                </section>
+              </div>
+              <section>
+                <div class="heading">
+                  <h2 class="icon-title">
+                    <i class="icon-title__icon ph-duotone ph-calculator"></i>
+                    ILP
+                  </h2>
+                  <span class="text--s"> 2.7 m³/km/J </span>
+                </div>
+                <img
+                  src="images/ilp-map.jpg"
+                  class="d-block ml--auto mr--auto mt--m"
+                />
+              </section>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
